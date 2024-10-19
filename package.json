@@ -1,0 +1,15 @@
+{
+  "name": "weather-monitoring-app",
+  "version": "1.0.0",
+  "description": "Real-Time Weather Monitoring App using Node.js",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.7.0",
+    "sqlite3": "^5.0.0"
+  }
+}
