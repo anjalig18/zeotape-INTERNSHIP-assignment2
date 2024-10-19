@@ -1,6 +1,10 @@
 
 # **Application_2_Real-Time_Data_Processing_System_for_Weather_Monitoring**
 
+Based on your project's requirements and the files you've uploaded, I have updated the README content for **Assignment 2** to include all necessary elements such as codebase details, design choices, and dependencies. Here's the comprehensive **README.md** file code:
+
+# **Real-Time Weather Monitoring App**
+
 This project is a real-time weather monitoring application that fetches weather data from the **OpenWeatherMap API** and displays it in a user-friendly interface. It also includes daily weather summaries, alerts for temperature thresholds, and visualizations of weather trends using **Chart.js**.
 
 ## **Table of Contents**
@@ -31,6 +35,7 @@ This project is a real-time weather monitoring application that fetches weather 
 
 ## **Project Structure**
 
+```plaintext
 weather-monitoring-app/
 ├── node_modules/                # Node.js dependencies
 ├── public/
@@ -52,96 +57,129 @@ weather-monitoring-app/
 ├── package-lock.json            # Version-locked dependencies
 ├── weather.db                   # SQLite database for storing weather data
 └── README.md                    # Documentation file (this file)
-Installation and Setup
+```
+
+---
+
+## **Installation and Setup**
+
 To set up the project on your local machine:
 
-Clone the repository:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/weather-monitoring-app.git
+   cd weather-monitoring-app
+   ```
 
-bash
-Copy code
-git clone https://github.com/yourusername/weather-monitoring-app.git
-cd weather-monitoring-app
-Install dependencies: Run the following command to install all project dependencies:
+2. **Install dependencies**: Run the following command to install all project dependencies:
+   ```bash
+   npm install
+   ```
 
-bash
-Copy code
-npm install
-Create a .env file for storing your OpenWeatherMap API key:
+3. **Create a `.env` file** for storing your OpenWeatherMap API key:
+   ```bash
+   API_KEY=your_openweathermap_api_key
+   ```
 
-bash
-Copy code
-API_KEY=your_openweathermap_api_key
-How to Run
-Start the Node.js server:
+---
 
-bash
-Copy code
-npm start
-The app will run on http://localhost:3000.
+## **How to Run**
 
-Open your browser and navigate to http://localhost:3000. You can enter any Indian city name to get the weather data and visualizations.
+1. **Start the Node.js server**:
+   ```bash
+   npm start
+   ```
+   The app will run on `http://localhost:3000`.
 
-Dependencies
+2. Open your browser and navigate to `http://localhost:3000`. You can enter any Indian city name to get the weather data and visualizations.
+
+---
+
+## **Dependencies**
+
 The following dependencies are required to run the application:
 
-Node.js: Backend server to handle API requests and weather polling.
-Express.js: Web framework for Node.js to serve static files and handle routing.
-node-fetch: Fetch weather data from the OpenWeatherMap API.
-sqlite3: For storing weather data and daily summaries.
-Chart.js: Used for visualizing weather trends on the front-end.
-dotenv: To handle environment variables (API keys).
-Usage
-Search for Weather Data:
+- **Node.js**: Backend server to handle API requests and weather polling.
+- **Express.js**: Web framework for Node.js to serve static files and handle routing.
+- **node-fetch**: Fetch weather data from the OpenWeatherMap API.
+- **sqlite3**: For storing weather data and daily summaries.
+- **Chart.js**: Used for visualizing weather trends on the front-end.
+- **dotenv**: To handle environment variables (API keys).
 
-Enter the name of an Indian city (e.g., Delhi, Mumbai) in the search box.
-The app will fetch the real-time weather data and display it, including temperature, humidity, and wind speed.
-Set Temperature Units:
+---
 
-You can toggle between Celsius and Fahrenheit using the dropdown.
-View Daily Summaries:
+## **Usage**
 
-The app will calculate and display daily summaries including average, max, and min temperatures as well as the dominant weather condition for the day.
-Alerts for Temperature Thresholds:
+1. **Search for Weather Data**:
+   - Enter the name of an Indian city (e.g., Delhi, Mumbai) in the search box.
+   - The app will fetch the real-time weather data and display it, including temperature, humidity, and wind speed.
 
-You can set temperature thresholds, and the app will display an alert if the temperature exceeds your threshold for consecutive updates.
-Design Choices
-Modular Structure: The application is separated into three key components:
+2. **Set Temperature Units**:
+   - You can toggle between **Celsius** and **Fahrenheit** using the dropdown.
 
-Server-side logic (server.js): Handles weather data fetching, polling, and API routes.
-Database (database.js): Used for storing weather data and calculating daily summaries.
-Front-end (index.html, script.js, Chart.js): Displays weather data, alerts, and visualizations.
-User Preferences:
+3. **View Daily Summaries**:
+   - The app will calculate and display daily summaries including average, max, and min temperatures as well as the dominant weather condition for the day.
 
-Users can choose their preferred temperature unit (Celsius or Fahrenheit), and the app will adjust accordingly.
-Alerts are configurable, allowing users to set custom temperature thresholds.
-Polling:
+4. **Alerts for Temperature Thresholds**:
+   - You can set temperature thresholds, and the app will display an alert if the temperature exceeds your threshold for consecutive updates.
 
-Weather data is fetched from OpenWeatherMap every 5 minutes for predefined Indian cities, ensuring real-time monitoring.
-API Endpoints
-Get Current Weather Data:
+---
 
-Endpoint: /weather/stored/:city
-Fetches the stored weather data for the given city.
-Get Daily Weather Summary:
+## **Design Choices**
 
-Endpoint: /daily-summary/:city
-Retrieves the daily summary (average, max, min temperatures) for the given city.
-Set Alert Thresholds:
+1. **Modular Structure**: The application is separated into three key components:
+   - **Server-side logic** (`server.js`): Handles weather data fetching, polling, and API routes.
+   - **Database** (`database.js`): Used for storing weather data and calculating daily summaries.
+   - **Front-end** (`index.html`, `script.js`, `Chart.js`): Displays weather data, alerts, and visualizations.
 
-Endpoint: /set-threshold
-Method: POST
-Body: { "tempThreshold": <number>, "alertConsecutive": <number> }
-Sets the user-configurable thresholds for temperature alerts.
-Alerts and Thresholds
-Threshold Settings: You can configure your temperature threshold (e.g., 35°C) via a POST request. The app will monitor temperature updates and display alerts if the temperature exceeds this threshold for consecutive updates.
-Alert Display: Alerts will appear on the same page, below the weather data, when thresholds are breached.
-Visualization
-Chart.js is used for plotting daily summaries:
+2. **User Preferences**:
+   - Users can choose their preferred temperature unit (Celsius or Fahrenheit), and the app will adjust accordingly.
+   - Alerts are configurable, allowing users to set custom temperature thresholds.
 
-Line Graph: Displays average, max, and min temperatures for each day.
-User-Friendly Interface: Data is fetched dynamically and visualized to provide clear trends for the selected city.
-Contributing
+3. **Polling**:
+   - Weather data is fetched from OpenWeatherMap every 5 minutes for predefined Indian cities, ensuring real-time monitoring.
+
+---
+
+## **API Endpoints**
+
+1. **Get Current Weather Data**:
+   - Endpoint: `/weather/stored/:city`
+   - Fetches the stored weather data for the given city.
+
+2. **Get Daily Weather Summary**:
+   - Endpoint: `/daily-summary/:city`
+   - Retrieves the daily summary (average, max, min temperatures) for the given city.
+
+3. **Set Alert Thresholds**:
+   - Endpoint: `/set-threshold`
+   - Method: `POST`
+   - Body: `{ "tempThreshold": <number>, "alertConsecutive": <number> }`
+   - Sets the user-configurable thresholds for temperature alerts.
+
+---
+
+## **Alerts and Thresholds**
+
+- **Threshold Settings**: You can configure your temperature threshold (e.g., 35°C) via a POST request. The app will monitor temperature updates and display alerts if the temperature exceeds this threshold for consecutive updates.
+- **Alert Display**: Alerts will appear on the same page, below the weather data, when thresholds are breached.
+
+---
+
+## **Visualization**
+
+**Chart.js** is used for plotting daily summaries:
+- **Line Graph**: Displays average, max, and min temperatures for each day.
+- **User-Friendly Interface**: Data is fetched dynamically and visualized to provide clear trends for the selected city.
+
+---
+
+## **Contributing**
+
 Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to create an issue or submit a pull request.
 
-License
+---
+
+## **License**
+
 This project is licensed under the MIT License.
