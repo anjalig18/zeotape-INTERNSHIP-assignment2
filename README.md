@@ -1,7 +1,5 @@
-Here’s the **Markdown code** for the **README.md** file you requested:
 
-```markdown
-# **Real-Time Weather Monitoring App**
+# **Application_2_Real-Time_Data_Processing_System_for_Weather_Monitoring**
 
 This project is a real-time weather monitoring application that fetches weather data from the **OpenWeatherMap API** and displays it in a user-friendly interface. It also includes daily weather summaries, alerts for temperature thresholds, and visualizations of weather trends using **Chart.js**.
 
