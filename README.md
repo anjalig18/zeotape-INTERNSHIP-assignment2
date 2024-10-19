@@ -3,6 +3,11 @@
 
 This project is a real-time weather monitoring application that fetches weather data from the **OpenWeatherMap API** and displays it in a user-friendly interface. It also includes daily weather summaries, alerts for temperature thresholds, and visualizations of weather trends using **Chart.js**.
 
+## **Codebase**
+The complete code for this project can be found at the following GitHub repository:
+
+[Assignment 2 GitHub Repository](https://github.com/anjalig18/zeotape-INTERNSHIP-assignment2.git)
+
 ## **Table of Contents**
 1. [Features](#features)
 2. [Project Structure](#project-structure)
