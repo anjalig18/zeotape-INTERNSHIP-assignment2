@@ -31,7 +31,6 @@ This project is a real-time weather monitoring application that fetches weather 
 
 ## **Project Structure**
 
-```plaintext
 weather-monitoring-app/
 ├── node_modules/                # Node.js dependencies
 ├── public/
